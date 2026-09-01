@@ -1,0 +1,522 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.7;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 90px 20px;
+}
+
+section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    color: #172554;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: linear-gradient(90deg, #f59e0b, #f97316);
+    margin: 12px auto 0;
+    border-radius: 50px;
+}
+
+section p {
+    margin-bottom: 18px;
+    color: #475569;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(245, 158, 11, 0.25), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.25), transparent 30%),
+        linear-gradient(135deg, #0f172a, #172554, #1e3a8a);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    top: -100px;
+    left: -80px;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+    right: -150px;
+    bottom: -200px;
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(36px, 6vw, 62px);
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-shadow: 0 5px 25px rgba(0,0,0,0.25);
+}
+
+header p {
+    display: inline-block;
+    font-size: 20px;
+    font-style: italic;
+    color: #fde68a;
+    padding: 8px 20px;
+    border: 1px solid rgba(253, 230, 138, 0.4);
+    border-radius: 50px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    background:
+        linear-gradient(rgba(238,242,255,0.92), rgba(248,250,252,0.96));
+}
+
+.hero figure {
+    margin-bottom: 35px;
+}
+
+.hero img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 7px solid white;
+    box-shadow:
+        0 20px 50px rgba(23, 37, 84, 0.25),
+        0 0 0 8px rgba(245, 158, 11, 0.12);
+    transition: all 0.4s ease;
+}
+
+.hero img:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:
+        0 30px 60px rgba(23, 37, 84, 0.3),
+        0 0 0 10px rgba(245, 158, 11, 0.15);
+}
+
+.hero figcaption {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.hero h2 {
+    margin-top: 20px;
+}
+
+.hero > .container > p {
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   BIOGRAPHY
+========================= */
+
+#biography {
+    background: white;
+}
+
+#biography .container {
+    max-width: 900px;
+}
+
+#biography p {
+    background: #f8fafc;
+    padding: 22px 25px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border-left: 4px solid #f59e0b;
+    transition: all 0.3s ease;
+}
+
+#biography p:hover {
+    transform: translateX(6px);
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+#achievements {
+    background: linear-gradient(135deg, #f8fafc, #eef2ff);
+}
+
+#achievements ul {
+    max-width: 850px;
+    margin: 40px auto 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 18px;
+}
+
+#achievements li {
+    position: relative;
+    background: white;
+    padding: 20px 25px 20px 60px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+    transition: all 0.3s ease;
+}
+
+#achievements li::before {
+    content: "★";
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f59e0b;
+    font-size: 18px;
+}
+
+#achievements li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(23, 37, 84, 0.12);
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+#timeline {
+    background: white;
+}
+
+#timeline .container {
+    max-width: 900px;
+}
+
+#timeline .container::before {
+    content: "";
+    position: absolute;
+}
+
+.timeline-item {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 25px;
+    padding: 25px 30px;
+    background: #f8fafc;
+    border-radius: 0 18px 18px 0;
+    border-left: 5px solid #1e3a8a;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(8px);
+    border-left-color: #f59e0b;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+}
+
+.timeline-item h3 {
+    display: inline-block;
+    color: white;
+    background: linear-gradient(135deg, #172554, #1e40af);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    margin: 0;
+}
+
+
+/* =========================
+   INSPIRATION
+========================= */
+
+#inspiration {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(245,158,11,0.15), transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(59,130,246,0.15), transparent 25%),
+        #eef2ff;
+}
+
+#inspiration .container {
+    position: relative;
+    z-index: 2;
+}
+
+#inspiration p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+blockquote {
+    position: relative;
+    max-width: 850px;
+    margin: 40px auto 0;
+    padding: 35px 45px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    border-left: 6px solid #f59e0b;
+    box-shadow: 0 15px 40px rgba(23,37,84,0.1);
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    line-height: 1.7;
+    font-style: italic;
+    color: #172554;
+}
+
+blockquote::before {
+    content: "“";
+    position: absolute;
+    left: 15px;
+    top: -15px;
+    font-size: 80px;
+    color: #f59e0b;
+    opacity: 0.3;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background:
+        linear-gradient(135deg, #0f172a, #172554);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer p {
+    color: #cbd5e1;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+footer p:last-child {
+    color: #94a3b8;
+}
+
+
+/* =========================
+   SELECTION
+========================= */
+
+::selection {
+    background: #f59e0b;
+    color: white;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#172554, #f59e0b);
+    border-radius: 20px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 65px 15px;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+
+    header {
+        padding: 60px 15px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    header p {
+        font-size: 17px;
+    }
+
+    .hero img {
+        width: 240px;
+        height: 300px;
+    }
+
+    .hero > .container > p {
+        font-size: 16px;
+    }
+
+    blockquote {
+        font-size: 19px;
+        padding: 30px 25px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 94%;
+    }
+
+    header {
+        padding: 50px 12px;
+    }
+
+    header h1 {
+        font-size: 31px;
+        line-height: 1.2;
+    }
+
+    header p {
+        font-size: 14px;
+        padding: 7px 15px;
+    }
+
+    section {
+        padding: 50px 12px;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+
+    .hero img {
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+    }
+
+    #biography p {
+        padding: 18px;
+        font-size: 14px;
+    }
+
+    #achievements li {
+        padding: 17px 18px 17px 50px;
+        font-size: 14px;
+    }
+
+    #achievements li::before {
+        left: 15px;
+    }
+
+    .timeline-item {
+        padding: 20px;
+    }
+
+    .timeline-item h3 {
+        font-size: 14px;
+    }
+
+    .timeline-item p {
+        font-size: 14px;
+    }
+
+    blockquote {
+        font-size: 17px;
+        padding: 25px 20px;
+    }
+
+    footer {
+        padding: 30px 15px;
+    }
+}
